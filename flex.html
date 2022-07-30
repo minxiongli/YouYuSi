@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #ccc;
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+        .mgb8{
+            margin-bottom: 8px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            width: 200px;
+            height: 100%;
+            background-color: aqua;
+        }
+
+        .right {
+            height: 100vh;
+            background-color: rgb(61, 78, 175);
+        }
+
+        .tou {
+            height: 100px;
+            background-color: azure;
+        }
+
+        .neirongleft {
+            background-color: azure;
+        }
+
+        .neirongRight {
+            background-color: blanchedalmond;
+        }
+
+        .neirongHeader {
+            background-color: aqua;
+            height: 160px;
+            justify-content: space-around;
+        }
+
+        .box1 {
+            background-color: darkcyan;
+            height: 160px;
+            margin-top: 8px;
+        }
+        .box2{
+            height: 160px;
+            width: 150px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right flex flex1 column">
+            <!-- 头部 -->
+            <div class="tou flex  column"></div>
+            <!-- 内容区 -->
+            <div class="neirong flex flex1" style="overflow: auto;">
+                <div class="neirongleft flex column mg8" style="flex:3">
+                    <div class="neirongHeader flex ">
+                        <div class="box2 flex "></div>
+                        <div class="box2 flex"></div>
+                        <div class="box2 flex"></div>
+                        <div class="box2 flex"></div>
+                    </div>
+                    <div class="neirongBody flex column">
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                        <div class="box1 flex"></div>
+                    </div>
+
+                </div>
+                <div class="neirongRight flex column mgr8 mgt8" style="flex:1">
+                    <div class="box1"></div>
+                    <div class="box1"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
