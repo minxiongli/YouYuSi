@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background: url(./img/HorizonZero\ Dawn.png) no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        input {
+            border: none;
+            background-color: aliceblue;
+            opacity: 0.8;
+        }
+
+        .button {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            right: 0;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .button:hover {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" placeholder="今日要做的事">
+        <label class="button">√</label>
+    </div>
+</body>
+<script>
+    // let youShi = false;
+
+    // function change() {
+
+    //     var container = document.querySelector('.container');
+    //     var button = document.querySelector('.button');
+    //     var input = document.querySelector('input');
+    //     if (youShi) {
+    //         youShi = false;
+    //         button.innerText = "√";
+    //         input.style.borderBottomColor = "#fff";
+    //         input.value = "";
+    //         input.readOnly = false;
+    //     } else {
+    //         youShi = true;
+    //         button.innerText = "×";
+    //         input.style.borderBottomColor = "transparent";
+    //         input.readOnly = true;
+    //         window.localStorage.setItem('shi', input.value);
+    //     }
+    // }
+
+    // let data = window.localStorage.getItem('shi');
+    // if (data) {
+    //     input.value = data;
+    //     // change();
+    // }
+    var container = document.querySelector('.container');
+    var button = document.querySelector('.button');
+    var input = document.querySelector('input');
+    button.onclick = function() {
+        if (input.readOnly) {
+            input.readOnly = false;
+            input.style.borderBottomColor = "#fff";
+            input.value = "";
+        } else {
+            input.readOnly = true;
+            input.style.borderBottomColor = "transparent";
+            window.localStorage.setItem('shi', input.value);
+        }
+    }
+
+    let data = window.localStorage.getItem('shi');
+    if (data) {
+        input.value = data;
+        // change();
+    }
+</script>
+
+</html>

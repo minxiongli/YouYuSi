@@ -83,11 +83,23 @@
             <a href="https://www.baidu.com">点击前往最大搜索引擎</a>
             <a href="https://minxiongli.github.io/YouYuSi/">点击前往最小站点</a>
             <a href="./flex.html">点击前往flex色块</a>
+            <div class="likeNum">0</div>
+            <button class="like">点赞</button>
         </div>
     </article>
     <footer>
         <div class="footer"></div>
     </footer>
 </body>
+<script>
+    // 点赞功能
+    var like = document.querySelector('.like');
+    var likeNum = document.querySelector('.likeNum');
+    var likeNumNum = parseInt(likeNum.innerHTML);
+    like.onclick = function() {
+        likeNumNum++;
+        likeNum.innerHTML = likeNumNum;
+    }
 
+</script>
 </html>
